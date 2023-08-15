@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap" rel="stylesheet">
+  <title>REST Countries API</title>
+</head>
+<body class="dark-theme">
+    <header>
+        <div class="header-content">
+          <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for a country...">
+            <button id="searchButton">Search</button>
+          </div>
+          <button id="themeToggle">Toggle Theme</button>
+        </div>
+      </header>
+      
+      
+  <main>
+    <div id="countryList" class="country-list">
+       
+        <div class="country-card">
+            <img class="country-flag" src="" alt="Country Flag">
+            <h2 class="country-name">Country Name</h2>
+            <p class="country-info"><span class="info-label">Capital:</span> <span class="capital"></span></p>
+            <p class="country-info"><span class="info-label">Region:</span> <span class="region"></span></p>
+            <p class="country-info"><span class="info-label">Currency:</span> <span class="currency"></span></p>
+            <p class="country-info"><span class="info-label">Language:</span> <span class="language"></span></p>
+            
+          </div>
+          
+  
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
