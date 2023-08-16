@@ -7,8 +7,8 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-.dark-theme {
-  background-color: hsl(207, 26%, 17%); 
+.dark-them {
+  background-color: hsla(209, 26%, 17%, 0.555); 
   color: hsl(0, 0%, 98%); 
 }
 
@@ -72,6 +72,17 @@ body {
     padding: 8px;
     color: hsl(0, 0%, 0%)
   }
+
+ 
+#choosen_region {
+  padding: 10px;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 8px;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
+  cursor: pointer;
+}
+
 
   i {
     padding: .6rem .3rem 0 0;

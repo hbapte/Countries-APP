@@ -43,6 +43,30 @@ function performSearch() {
 })();
 
 
+
+const regionSelect = document.getElementById('choosen_region');
+regionSelect.addEventListener('change', filterByRegion);
+
+function filterByRegion() {
+  const selectedRegion = regionSelect.value;
+  if (selectedRegion === '') {
+    renderCountries(countries);
+  } else {
+    const filteredCountries = countries.filter(country =>
+      country.region.toLowerCase() === selectedRegion
+    );
+    renderCountries(filteredCountries);
+  }
+}
+
+
+(async function () {
+  countries = await fetchCountries(); 
+  renderCountries(countries);
+})();
+
+
+
   
   function renderCountries(countries) {
     countryList.innerHTML = '';
