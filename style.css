@@ -1,15 +1,21 @@
-
 body {
-    font-family: 'Nunito Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: hsl(0, 0%, 98%);
-    color: hsl(200, 15%, 8%);
-  }
-  
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-theme {
+  background-color: hsl(207, 26%, 17%); 
+  color: hsl(0, 0%, 98%); 
+}
+
 #main_header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0rem 1rem;
   background-color:hsl(0, 0%, 100%) ;
 }
@@ -57,13 +63,29 @@ body {
     border-radius: 8px;
     width: 13rem;
     padding: 8px 15px;
+  
     
+  }
+
+  select option {
+    background-color: white; 
+    padding: 8px;
+    color: hsl(0, 0%, 0%)
+  }
+
+  i {
+    padding: .6rem .3rem 0 0;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: hsl(210, 70%, 50%); 
   }
   
   
   .country-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     gap: 2rem;
     padding: 1rem;
   }

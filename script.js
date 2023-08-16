@@ -1,15 +1,5 @@
 
 const countryList = document.getElementById('countryList');
-const themeToggle = document.getElementById('themeToggle');
-let darkMode = false;
-
-themeToggle.addEventListener('click', toggleTheme);
-
-
-function toggleTheme() {
-  darkMode = !darkMode;
-  document.body.classList.toggle('dark-theme', darkMode);
-}
 
 async function fetchCountries() {
   try {
@@ -22,6 +12,17 @@ async function fetchCountries() {
   }
 }
 
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-theme');
+  if (body.classList.contains('dark-theme')) {
+    themeToggle.innerHTML = '<p> <i class="theme-icon bx bx-sun"></i>Light Mode</p>';
+  } else {
+    themeToggle.innerHTML = '<p> <i class="theme-icon bx bx-moon"></i>Dark Mode</p>';
+  }
+});
 
 const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', performSearch);

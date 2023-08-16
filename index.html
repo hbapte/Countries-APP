@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+<link rel="manifest" href="./favicon/site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,12 +18,15 @@
 
 
     <header>
-        <div id="main_header">
-          <div class="logo">
-            <p> Where in the World? </p></div>
-          <div class="theme">
-            <p>Dark Mode</p></div>
+      <div id="main_header">
+        <div class="logo">
+          <p> Where in the World? </p>
         </div>
+        <div class="theme" id="themeToggle">          
+          <p> <i class='bx bx-moon'></i> Dark Mode</p>
+        </div>
+      </div>   
+
         <div class="header-content">
           <div class="search-container">
             <input type="text" id="searchInput" placeholder="Search for a country...">
@@ -26,14 +34,13 @@
           </div> 
 
           <select name="region" id="choosen_region">
-            <option value="africa">Filter by Region</option>
+            <option value="" disabled selected hidden>Filter by Region</option>
             <option value="africa">Africa</option>
-            <option value="africa">America</option>
-            <option value="africa">Asia</option>
-            <option value="africa">Oceania</option>
-            
+            <option value="america">America</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="aceania">Oceania</option>
           </select>
-
 
                     
         </div>
